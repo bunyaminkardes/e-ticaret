@@ -1,0 +1,19 @@
+{
+  "name": "e-ticaret",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bunyaminkardes/e-ticaret.git"
+  },
+  "author": "Bünyamin KARDEŞ",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bunyaminkardes/e-ticaret/issues"
+  },
+  "homepage": "https://github.com/bunyaminkardes/e-ticaret#readme"
+}
