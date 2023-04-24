@@ -1,3 +1,4 @@
+const testData = require("../testData.js"); //test
 const loginController = {};
 
 loginController.getLoginPage = (req,res)  => {
@@ -5,7 +6,11 @@ loginController.getLoginPage = (req,res)  => {
 }
 
 loginController.login = (req,res) => {
-    //login işlemi yapılacak.
+    if(req.body.kullaniciAdi === testData.username && req.body.sifre === testData.password) {
+        console.log("giris basarili...");
+        req.session.girisYapanKullanici = testData.username;
+    }
+    res.redirect('/'); //işlem sonunda yönlendirme yap.
 }
 
 module.exports = loginController;
