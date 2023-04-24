@@ -2,7 +2,12 @@ const testData = require("../testData.js"); //test
 const loginController = {};
 
 loginController.getLoginPage = (req,res)  => {
-    res.render('giris');
+    if(req.session.girisYapanKullanici) {
+        res.redirect('/');
+    }
+    else {
+        res.render('giris');
+    }
 }
 
 loginController.login = (req,res) => {

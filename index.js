@@ -9,6 +9,8 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const routes = require("./routes/routes.js");
 const session = require("express-session");
+const db = require("./config/db.js");
+
 
 const app = express();
 
@@ -26,4 +28,7 @@ app.use(session({ //bunu app.use('/', routes); altında tanımlarsan hata veriyo
 
 app.use('/', routes);
 
-app.listen(PORT);
+db.once("open", function() {
+    console.log("veritabanı bağlantısı kuruldu.");
+    app.listen(PORT);
+});
