@@ -1,13 +1,14 @@
 const PORT = 3000;
 
-
 const express = require("express");
+const routes = require("./routes/routes.js");
+
+
+
 const app = express();
 
-app.set('view engine', 'ejs');
+app.use('/', routes);
 
-app.get('/', (req,res) => {
-    res.send("ilk");
-})
+app.set('view engine', 'ejs');
 
 app.listen(PORT);
