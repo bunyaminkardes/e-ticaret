@@ -1,6 +1,6 @@
-<span>Anasayfada bulunuyorsun.</span>
-<br>
+<%- include('partials/head', {title : "anasayfa"}) %>
 
+bu anasayfa içeriği.
 
 <% if (data) { %>
     <span>Hoşgeldin,</span> <%= data %>
@@ -8,3 +8,5 @@
 <%} else { %>
     <a href="/login">giriş yapmak için tıkla.</a>
 <%} %>
+
+<%- include('partials/end') %>
