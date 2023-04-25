@@ -1,11 +1,9 @@
-<%= data %>
-
-<br>
-ANASAYFA
+<span>Anasayfada bulunuyorsun.</span>
 <br>
 
 
 <% if (data) { %>
+    <span>Hoşgeldin,</span> <%= data %>
     <a href="/logout">çıkış yapmak için tıkla</a>
 <%} else { %>
     <a href="/login">giriş yapmak için tıkla.</a>
