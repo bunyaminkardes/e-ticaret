@@ -19,7 +19,7 @@ mongoose.connect(process.env.MONGO_URL, {
     useNewUrlParser : true,
     useUnifiedTopology : true,
 }).then(() => {
-    fakeData.generateFakeUser(20);
+    fakeData.generateFakeData();
     app.listen(process.env.PORT, () => {
         console.log("veritabanı bağlantısı başarılı.");
         console.log(`uygulama ${process.env.PORT} portunda çalışıyor.`);

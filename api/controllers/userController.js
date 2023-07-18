@@ -35,8 +35,15 @@ userController.login = async (req, res) => {
         if (!isPasswordMatched) {
             return res.status(400).json({ message: 'girilen bilgiler yanlış.' });
         }
-        const token = await jwt.sign({ id: existingUser._id }, process.env.JWT_SECRET_KEY, { expiresIn: process.env.JWT_EXPIRE });
-        return res.status(200).cookie("token", token, {httpOnly: true}).json({ success: true, message: "giriş başarılı." });
+        const token = await jwt.sign({ id: existingUser._id }, process.env.JWT_SECRET_KEY, {
+             expiresIn: process.env.JWT_EXPIRE
+        });
+        return res.status(200).cookie("jwtToken", token, {
+            httpOnly: true,
+            secure: true,
+            maxAge: 3600000, //1 saat (milisaniye cinsinden)
+            sameSite: 'strict'
+        }).json({ success: true, message: "giriş başarılı." });
     }
     catch (error) {
         return res.status(500).json({ error: error });
