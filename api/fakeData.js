@@ -4,29 +4,29 @@ const productModel = require("./models/productModel");
 
 const fakeUsers = [
     {
-        username : 'crazycowboy01',
+        username : '0bunyamin0',
         password : '123456',
-        email : 'crazycowboy01@gmail.com'
+        email : 'testEmail1@gmail.com'
     },
     {
-        username : 'yagizDelikanliEfe',
+        username : '1efe1',
         password : '123456',
-        email : 'kyusufefe@hotmail.com'
+        email : 'testEmail2@outlook.com'
     },
     {
-        username : 'evrenLorduAtakan',
+        username : '2atakan2',
         password : '123456',
-        email : 'atakanking32@outlook.com'
+        email : 'testEmail3@hotmail.com'
     },
     {
-        username : 'shkzb',
+        username : '3enes3',
         password : '123456',
-        email : 'kimkaldieskilerden@windowslive.com'
+        email : 'testEmail4@windowslive.com'
     },
     {
-        username : 'counqemt2ci',
+        username : '4dogukan4',
         password : '123456',
-        email : 'vaybe@gmail.com'
+        email : 'testEmail5@yahoo.com'
     }
 ];
 

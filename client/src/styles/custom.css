@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+:root
+{
+    --headerYukseklik : 60px;
+    --navbarYukseklik : 40px;
+    --footerYukseklik : 60px;
+    --headerBgColor : #ebe9e9;
+    --navbarBgColor : #dbd6d6;
+    --footerBgColor : #ebe9e9;
+    --kusakBgColor : rgb(111, 190, 133);
+    --fontFamily : 'Montserrat';
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #656565;
+    font-family: var(--fontFamily);
+}
+#header {
+    background-color: var(--headerBgColor);
+    height: var(--headerYukseklik);
+    line-height: var(--headerYukseklik);
+}
+#footer {
+    background-color: var(--footerBgColor);
+    height: var(--footerYukseklik);
+}
+.homePlaceholder { /* test amaçlı, sil */
+    height: 600px;
+    background-color: #ffffff;
+}
+.kusak {
+    height: 5px;
+    background-color: var(--kusakBgColor);
+}
+#navbar {
+    margin:0;
+    padding:0;
+    background-color: var(--navbarBgColor);
+    height: var(--navbarYukseklik);
+}
+#navbar ul {
+    margin:0;
+    padding:0;
+    width: 100%;
+    text-align: center;
+}
+#navbar ul li {
+    display: inline-block;
+    list-style-type: none;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+#navbar ul li a {
+    display: inline-block;
+    font-size: 16px;
+    text-decoration: none;
+    color : #000;
+    line-height: var(--navbarYukseklik);
+}
+#navbar ul li a:hover{
+    transition: 0.3s ease-in-out;
+    background-color: rgb(205, 250, 137);
+}
+.flex-center
+{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+#search-bar input {
+    width: 100%;
+    height: 30px;
+}
+#logo {
+    width: 50px;
+}
